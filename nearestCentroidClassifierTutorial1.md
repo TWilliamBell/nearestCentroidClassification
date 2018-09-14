@@ -158,4 +158,4 @@ legend(x = 2.2, y = 1.8, legend = c("Predicted", "Actual"), pch = c(19, 1))
     ## Proportion Correct 
     ##              0.925
 
-Here, the fill represents the predicted classification, and the outline represents the actual classification. We see that in fact we had a 90% correct prediction rate, which is pretty good for starters. Like with previous tutorials I'll try to fit in another one that does a benchmark with an established function and another that does geometric morphometrics on the data.
+Here, the fill represents the predicted classification, and the outline represents the actual classification. We see that in fact we had a ~93% correct prediction rate, which is pretty good for starters. Like with previous tutorials I'll try to fit in another one that does a benchmark with an established function and another that does geometric morphometrics on the data.
