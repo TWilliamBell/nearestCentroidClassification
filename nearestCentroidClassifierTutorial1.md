@@ -1,4 +1,4 @@
-#Nearest Centroid Classification: Tutorial 1
+# Nearest Centroid Classification: Tutorial 1
 
 In a previous repository, I tried my hand at explaining the k-Nearest Neighbours algorithm for classifying points. In this tutorial, we will shortly cover another method of classification: nearest centroid classification.
 
