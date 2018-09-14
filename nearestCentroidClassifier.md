@@ -2,7 +2,7 @@ In a previous repository, I tried my hand at explaining the k-Nearest Neighbours
 
 The first thing we should cover is what a **centroid** is. A **centroid** simply put is the multivariate extension of the mean, it is the mean of the points in each dimension, which is itself a point in roughly the 'middle' of the space.
 
-![](nearestCentroidClassifier_files/figure-markdown_github/centroidvis-1.png)
+![](Graphics/nearestCentroidClassifier_files/figure-markdown_github/centroidvis-1.png)
 
 This graph is a great example of the centroid of a dataset, but also of the pitfalls with centroids. The centroid is a multivariate mean, so like the standard mean, it is strongly sensitive to outliers. In order to get around this, we can use the median or a trimmed mean, both of which R provides (the median() function and the trim argument of the mean() function). You can see in the dataset above that there are three points close together and one further apart that in some sense 'drags' the centroid towards it. We can consider another case however:
 
@@ -30,7 +30,7 @@ This is a good start, but for now we don't need to worry about these details. Ce
 
 Now suppose instead of one group in my data, I have two:
 
-![](nearestCentroidClassifier_files/figure-markdown_github/twocluster-1.png)
+![](Graphics/nearestCentroidClassifier_files/figure-markdown_github/twocluster-1.png)
 
 This is how we arrive at nearest centroid classification. If we have another point in this picture, how far are you from each of the centroids? We may classify a new point based on which centroid it is closest to. We will demonstrate an example to classify novel points in that way.
 
@@ -83,11 +83,11 @@ classifications <- c(rep("red", 100), rep("blue", 100))
 plot(simulatedData, col = classifications, main = "Simulated Dataset")
 ```
 
-![](nearestCentroidClassifier_files/figure-markdown_github/unnamed-chunk-1-1.png)
+![](Graphics/nearestCentroidClassifier_files/figure-markdown_github/unnamed-chunk-1-1.png)
 
 This opportunity will show another potential pitfall of nearest centroid techniques: in this case, the datasets are far more overlapping to the points that if we leave the colour out...
 
-![](nearestCentroidClassifier_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![](Graphics/nearestCentroidClassifier_files/figure-markdown_github/unnamed-chunk-2-1.png)
 
 You could be led to suspect it is in fact a single cluster. In this case, we expect a lot more false classifications in the overlap. If I can find the time, in another tutorial I will try to show methods that can distinguish between one cluster and two (e.g. 'non-parametric' Bayesian methods), but for now we will just have to be satisfied that there is some such method.
 
@@ -125,7 +125,7 @@ rm(i, x, y)
 plot(x = resultMatrix[ , 1], y = resultMatrix[ , 2], col = pixelColour, cex = 0.1, xlab = "X", ylab = "Y", main = "Classification Map")
 ```
 
-![](nearestCentroidClassifier_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](Graphics/nearestCentroidClassifier_files/figure-markdown_github/unnamed-chunk-3-1.png)
 
 We can also take some of our data and set it aside as a testing sample, then see how good the nearest centroid method is at predicting the classification of that data when we use the rest of the data, the training data.
 
@@ -151,7 +151,7 @@ plot(x = c(testData[ , 1], testData[ , 1]), y = c(testData[ , 2], testData[ , 2]
 legend(x = 2.2, y = 1.8, legend = c("Predicted", "Actual"), pch = c(19, 1))
 ```
 
-![](nearestCentroidClassifier_files/figure-markdown_github/testtrain-1.png)
+![](Graphics/nearestCentroidClassifier_files/figure-markdown_github/testtrain-1.png)
 
     ## Proportion Correct 
     ##              0.925
