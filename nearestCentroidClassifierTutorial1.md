@@ -1,3 +1,5 @@
+#Nearest Centroid Classification: Tutorial 1
+
 In a previous repository, I tried my hand at explaining the k-Nearest Neighbours algorithm for classifying points. In this tutorial, we will shortly cover another method of classification: nearest centroid classification.
 
 The first thing we should cover is what a **centroid** is. A **centroid** simply put is the multivariate extension of the mean, it is the mean of the points in each dimension, which is itself a point in roughly the 'middle' of the space.
